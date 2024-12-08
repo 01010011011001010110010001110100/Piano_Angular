@@ -1,12 +1,45 @@
 .container {
-    width:700px;
-    margin: auto;
-    margin-top: 20vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 10rem;
 }
+
+.tittlePanel {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.contentPanel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.guidePanel {
+    height: 100%;
+    width: 300px;
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.playgroundPanel {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-image: linear-gradient(#33333309 .1em, transparent .1em), linear-gradient(90deg, #33333309 .1em, transparent .1em);
+    background-size: 2.5em 2.5em;
+}
+
 
 .tittle {
     font-family: "Poppins", serif;
@@ -14,6 +47,5 @@
     font-style: normal;
     text-align: center;
     border-radius: 1rem;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.13);
 }
 

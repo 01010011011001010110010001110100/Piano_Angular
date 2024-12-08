@@ -1,13 +1,18 @@
 <div class="container">
-    <div class="keyHistory">
-        @for (keyName of keysHirtory; track $index) {
-            <key-note [name]="keyName"/>
+    <div class="keyHistory" #keyHistory>
+        @for (keyInfo of keysHirtory; track $index) {
+            <key-note 
+                [name]="keyInfo.name" 
+                [currentType]="keyInfo.type"
+                [posX]="keyInfo.x"
+                [posY]="keyInfo.y"
+            />
         }
     </div>
     <div class="pianoContainer">
         <div class="pianoHead">
             <div class="buttonPower">
-                <button-switch (wasPressed)="changePower();"/>
+                <buttonComp (wasPressed)="changePower();" boostrapIcon="bi bi-power"/>
                 @if (power) {
                     <i class="bi bi-circle-fill" [style.color]="'green'"></i>
                 } @else {
@@ -27,7 +32,7 @@
                         <piano-key 
                             [name]="keyName + '.mp3'" 
                             [canBePressed]="power" 
-                            (wasPressed)="addKeyToTheHistory($event)"
+                            (wasPressed)="addKeyToTheHistory($event, whitekKeyType)"
                             [currentClasses]="{'white':true}"
                         />
                     }
@@ -37,9 +42,9 @@
                         <piano-key 
                             [name]="keyName + '.mp3'" 
                             [canBePressed]="power" 
-                            (wasPressed)="addKeyToTheHistory($event)" 
+                            (wasPressed)="addKeyToTheHistory($event, blackKeyType)" 
                             [currentClasses]="{'black':true}"
-                            [style.margin-left]="BlackKeysSpaces[currentOctaveSelected?.value ?? getNamesOctaves()[0]][$index]"
+                            [style.margin-left]="blackKeysSpaces[currentOctaveSelected?.value ?? getNamesOctaves()[0]][$index]"
                         />
                     }
                 </div>

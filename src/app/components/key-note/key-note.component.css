@@ -1,0 +1,47 @@
+p {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    opacity: 0;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 0;
+    animation: GoUp 1s ease;
+}
+
+.white {
+    background-color: rgb(73, 188, 196);
+    width: 2.15rem;
+    height: 2.15rem;
+}
+
+.black {
+    background-color: rgb(177, 226, 43);
+    font-size: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+@keyframes GoUp {
+    0% {
+        transform: translateY(0px);
+        transform: translateX(-30px);
+    }
+    10% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-370px);
+    }
+}

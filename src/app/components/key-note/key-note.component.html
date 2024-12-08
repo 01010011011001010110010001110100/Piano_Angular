@@ -1,1 +1,7 @@
-<p>{{name}}</p>
+<p [class]="currentType == whiteType ? 'white': 'black'" [style.top.px]="posY" [style.left.px]="posX">
+    @if(currentType == whiteType) {
+        {{name.split('.')[0]}}
+    } @else {
+        {{name.split('.')[0][0] + name.split('.')[0][2] +'#' }}
+    }
+</p>
