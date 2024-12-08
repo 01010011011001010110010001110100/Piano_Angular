@@ -1,0 +1,8 @@
+<button type="button" (click)="pressed()" [ngClass]="currentClasses">
+
+    @if(currentClasses['white']) {
+        {{name.split('.')[0]}}
+    } @else {
+        {{name.split('.')[0][0] + name.split('.')[0][2] +'#' }}
+    }
+</button>

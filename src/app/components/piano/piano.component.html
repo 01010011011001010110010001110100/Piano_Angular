@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="keyHistory">
+        @for (keyName of keysHirtory; track $index) {
+            <key-note [name]="keyName"/>
+        }
+    </div>
+    <div class="pianoContainer">
+        <div class="pianoHead">
+            <div class="buttonPower">
+                <button-switch (wasPressed)="changePower();"/>
+                @if (power) {
+                    <i class="bi bi-circle-fill" [style.color]="'green'"></i>
+                } @else {
+                    <i class="bi bi-circle-fill" [style.color]="'red'"></i>
+                }
+            </div>
+            <div class="buttonsOctaves">
+                @for (octave of getNamesOctaves(); track $index) {
+                    <item-selection [value]="octave" (wasPressed)="setOctaves($event)"/>
+                }
+            </div>
+        </div>
+        <div class="pianoBody">
+            <div class="keys">
+                <div class="whiteKeys">
+                    @for (keyName of octaves[currentOctaveSelected?.value ?? getNamesOctaves()[0]]['whites']; track $index) {
+                        <piano-key 
+                            [name]="keyName + '.mp3'" 
+                            [canBePressed]="power" 
+                            (wasPressed)="addKeyToTheHistory($event)"
+                            [currentClasses]="{'white':true}"
+                        />
+                    }
+                </div>
+                <div class="blackKeys">
+                    @for (keyName of octaves[currentOctaveSelected?.value ?? getNamesOctaves()[0]]['blacks']; track $index) {
+                        <piano-key 
+                            [name]="keyName + '.mp3'" 
+                            [canBePressed]="power" 
+                            (wasPressed)="addKeyToTheHistory($event)" 
+                            [currentClasses]="{'black':true}"
+                            [style.margin-left]="BlackKeysSpaces[currentOctaveSelected?.value ?? getNamesOctaves()[0]][$index]"
+                        />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

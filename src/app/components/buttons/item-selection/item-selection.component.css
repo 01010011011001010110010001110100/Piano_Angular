@@ -1,0 +1,11 @@
+button {
+    color: white;
+}
+
+.selected {
+    background-color: rgb(76, 128, 76);
+}
+
+.unselected {
+    background-color: rgb(214, 70, 70);
+}

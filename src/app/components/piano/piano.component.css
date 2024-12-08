@@ -1,0 +1,40 @@
+.keyHistory {
+    position: absolute;
+}
+
+.pianoHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonPower {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.buttonsOctaves {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.pianoBody {
+    margin-top: 1.3rem;
+}
+
+.keys {
+    background-color: aqua;
+    position: relative;
+}
+
+.blackKeys {
+    position: absolute;
+    display: flex;
+    width: 100%;
+}
+
+.whiteKeys {
+    position: absolute;
+    display: flex;
+}
