@@ -1,4 +1,5 @@
 .container {
+    margin-bottom: 5rem;
     width:700px;
     position: relative;
     z-index: 1;

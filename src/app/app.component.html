@@ -4,7 +4,42 @@
     </div>
     <div class="contentPanel">
         <div class="guidePanel">
-
+            <div class="item-guide item-guide-vertical">
+                GUIDE
+                <hr>
+            </div>
+            <div class="item-guide item-guide-horizontal item-guide-effect">
+                <buttonComp boostrapIcon="bi bi-power"/>
+                <p>-</p>
+                <p>Powe ON/OFF</p>
+            </div>
+            <div class="item-guide item-guide-horizontal item-guide-effect">
+                <item-selection value="1"/>
+                <item-selection value="2"/>
+                <item-selection value="3"/>
+                <p>-</p>
+                <p>Octaves</p>
+            </div>
+            <div class="item-guide item-guide-horizontal item-guide-effect">
+                <piano-key  name="A0" [currentClasses]="{white:true}"/>
+                <p>-</p>
+                <p>White Key</p>
+            </div>
+            <div class="item-guide item-guide-horizontal item-guide-effect">
+                <piano-key  name="Bb0" [currentClasses]="{black:true}"/>
+                <p>-</p>
+                <p>Black Key</p>
+            </div>
+            <div class="item-guide item-guide-horizontal item-guide-effect">
+                <p class="keyNote whiteKeyNote">A0</p>
+                <p>-</p>
+                <p>White Key Note</p>
+            </div>
+            <div class="item-guide item-guide-horizontal item-guide-effect">
+                <p class="keyNote blackKeyNote">B0#</p>
+                <p>-</p>
+                <p>Black Key Note</p>
+            </div>
         </div>
         <div class="playgroundPanel">
             <piano />

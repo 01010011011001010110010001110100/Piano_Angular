@@ -26,7 +26,47 @@
     height: 100%;
     width: 300px;
     border-right: 1px solid rgba(0, 0, 0, 0.11);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 0rem 1rem;
+    overflow: auto;
 }
+
+.item-guide {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.5rem;
+    padding: 1rem 0rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.item-guide-effect {
+    transition: border .3s ease;
+}
+
+.item-guide-effect:hover {
+    border: 1px solid rgba(0, 0, 0, 0.114);
+}
+
+.item-guide-horizontal {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.item-guide-vertical {
+    text-align: center;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
 
 .playgroundPanel {
     height: 100%;
@@ -49,3 +89,27 @@
     border-radius: 1rem;
 }
 
+
+.keyNote {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiteKeyNote {
+    background-color: rgb(73, 188, 196);
+    width: 2.15rem;
+    height: 2.15rem;
+}
+
+.blackKeyNote {
+    background-color: rgb(177, 226, 43);
+    font-size: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
